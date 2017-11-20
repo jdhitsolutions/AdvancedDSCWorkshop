@@ -3,3 +3,5 @@ dev*
 ~*
 *.bak
 SRV*
+CMSPassword.txt
+*(from*

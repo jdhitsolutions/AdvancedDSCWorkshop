@@ -19,7 +19,7 @@ Import-DscResource -ModuleName PSDesiredStateConfiguration,
 @{ModuleName = 'xTimeZone';RequiredVersion = '1.6.0.0'},
 @{ModuleName = 'xNetworking';RequiredVersion = '5.2.0.0'}
 
-#NO NODE  <---------- Look Mom!
+#NO NODE
 
 File Work {
     DestinationPath = 'C:\Work'
@@ -45,7 +45,7 @@ xSMBShare WorkShare {
     Name = 'Work$'
     Path = 'C:\work'
     FullAccess = "$DomainName\Domain Admins"
-    FolderEnumerationMode = 'AccessBased'
+    NoAccess = "$DomainName\Domain Users"
     Ensure = 'Present'
 }
 

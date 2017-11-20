@@ -13,9 +13,8 @@ Node $Allnodes.NodeName {
 Group Localadmin {
  GroupName = "Administrators"
  Ensure = 'Present'
- MembersToInclude  = "company\help desk"
- Credential = $node.credential
-
+ MembersToInclude  = @("company\aprils","company\help desk")
+ psdscrunasCredential = $node.credential
 }
 
 LocalConfigurationManager {
